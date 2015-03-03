@@ -1,56 +1,37 @@
-var navList, firstItem, link;
-//select all elements in the class 
-navList = $('.nav-list');
-//Moving to the first item in the DOM tree
-firstItem = navList.children().first();
-//In the first item, find the link
-link = firstItem.find('a');
-//apply the attribute
-link.attr('href', '#1');
+if(bio.skills.length>0) {
+}
 
+$('#main').append(internationalizeButton);
 
-//changing text using jQuary
-$('#input').on('change', function() {
-	var val, h1
-	val = $('#input').val();
-	h1 = $('.articles').children('h1');
-	h1.text(val);
+	for(con in bio.contacts) {
+		var	formattedMobile = HTMLmobile.replace("%data%", bio.contacts[con].mobile);
+		$("header").append(formattedMobile);
+	
+
+	}
+
+$("#header").append(formattedName);
+	
+	$("#header").append(formattedRole);
+
+		for(edu in education.onlineCourses) {
+		$("#education").append(HTMLonlineClasses);
+		var formattedTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[edu].title);
+		var formattedSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[edu].school);
+		var formattedTitleSchool = formattedTitle + formattedSchool;
+		$(".education-entry:last").append(formattedTitleSchool);
+		var formattedDate = HTMLonlineDates.replace("%data%", education.onlineCourses[edu].date);
+		$(".education-entry:last").append(formattedDate);
+		var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[edu].courseUrl);
+		$(".education-entry:last").append(formattedURL);
+	}	
 }
 
 
-//removes a DOM element h1 
-var articleItems, ul;
+//removed H3 so that the padding doesn't apply.  
 
-articleItems = $('.article-item');
-ul = articleItems.find('ul');
-ul.remove();
-
-//lets say if you want to remove just a particular element such as bold elements of h1
-articleItems = $('.article-item');
-ul = articleItems.find('ul');
-ul.children().remove('.bold');
-
-/*
-For this quiz, you'll need to add to the DOM tree that already exists.
-
-'#family2' should be a sibling of and come after '#family1'. '#bruce' should be the only immediate child
-of '#family2'. '#bruce' should have two <div>s as children, '#madison' and '#hunter'.
-*/
-
-// Your code goes here!
-var family1, bruce, madison, hunter;
-
-family1 = $('#family1');
-family2 = $('<div id="family2"<h1>family1</h1></div>');
-bruce = $('<div id="bruce"<h2>bruce</h2></div>');
-madison = $('<div id="madison"<h3>madison</h3></div>');
-hunter = $('<div id="hunter"<h3>hunter</h3></div>');
-
-family2.insertAfter(family1);
-family2.append(bruce);
-bruce.append(madison);
-bruce.append(hunter);
-
-//iterating each(); 
-
-$(this).text(); //returns text of each element
+h2, h4, h5 {   //no h3
+  padding:10px;
+  padding-left: 5%;
+  padding-right: 5%;
+}

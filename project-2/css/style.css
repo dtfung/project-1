@@ -32,7 +32,7 @@ h3 {
   font-style: italic;
   font-size: 20px;
   color: #000000;
-  line-height: 22px;
+  line-height: 55px; /*adjusted from 22px*/
 }
 
 h4 {
@@ -42,7 +42,8 @@ h4 {
   line-height: 17px;
 }
 
-h2, h3, h4, h5 {
+/*removed h3 to align the Online Classes heading.  */
+h2, h4, h5 { 
   padding:10px;
   padding-left: 5%;
   padding-right: 5%;
