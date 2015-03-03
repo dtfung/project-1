@@ -2,12 +2,12 @@ var bio = {
 	"name" : "Donald Fung",
 	"role" : "Web Developer",
 	"contacts" : 
-		{
-			"mobile" : "2848624",
-			"email" : "donaldtfung@gmail.com",
-			"gitHub" : "https://github.com/dtfung",
-			"twitter" : "https://twitter.com/donaldtfung",
-			"location" : "Jamaica"
+	{
+		"mobile" : "2848624",
+		"email" : "donaldtfung@gmail.com",
+		"gitHub" : "https://github.com/dtfung",
+		"twitter" : "https://twitter.com/donaldtfung",
+		"location" : "Jamaica"
 	},
 	"welcomeMessage" : "Hello, I really love this course!",
 	"skills" : [ "investor","time traveler","programmer"],
@@ -15,77 +15,77 @@ var bio = {
 };
 
 var work = {
-	"jobs" : [
-		{
-			"employer" : "Apple",
-			"title" : "Developer",
-			"location" : "New York",
-			"dates" : "February 2015 - present",
-			"description" : "designed websites"
-		},
-		{
-			"employer" : "Gap",
-			"title" : "Sales Associate",
-			"location" : "New York",
-			"dates" : "January 2011 - January 2015",
-			"description" : "sold clothes"
-		}
+	"jobs" : [ 
+	{
+		"employer" : "Apple",
+		"title" : "Developer",
+		"location" : "New York",
+		"dates" : "February 2015 - present",
+		"description" : "designed websites"
+	},
+	{
+		"employer" : "Gap",
+		"title" : "Sales Associate",
+		"location" : "New York",
+		"dates" : "January 2011 - January 2015",
+		"description" : "sold clothes"
+	}
 	]
 };
 
 var projects = {
-	"projects" : [
-		{
-			"title" : "Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration by Ed Catmull & Amy Wallace",
-			"dates" : "February 2015",
-			"description" : "Creativity, Inc. is a book for managers who want to lead their employees to new heights, a manual for anyone who strives for originality, and the first-ever, all-access trip into the nerve center of Pixar Animation",
-			"image" : "images/creativity.jpg"
-		},
-		{
-			"title" : "The Innovators Solution: Creating and Sustaining Successful Growth by Clayton M. Christensen",
-			"dates" : "January 2015",
-			"description" : "This book teaches new businesses how to outpace the competition and sustain growth in the market by thinking outside of conventional methods. Examples from successful businesses are cited, and business-making decisions are examined.",	
-			"image" : "images/innovatorsSolution.jpg"
-		}
+	"projects" : [ 
+	{
+		"title" : "Creativity, Inc.: Overcoming the Unseen Forces That Stand in the Way of True Inspiration by Ed Catmull & Amy Wallace",
+		"dates" : "February 2015",
+		"description" : "Creativity, Inc. is a book for managers who want to lead their employees to new heights, a manual for anyone who strives for originality, and the first-ever, all-access trip into the nerve center of Pixar Animation",
+		"image" : "images/creativity.jpg"
+	},
+	{
+		"title" : "The Innovators Solution: Creating and Sustaining Successful Growth by Clayton M. Christensen",
+		"dates" : "January 2015",
+		"description" : "This book teaches new businesses how to outpace the competition and sustain growth in the market by thinking outside of conventional methods. Examples from successful businesses are cited, and business-making decisions are examined.",	
+		"image" : "images/innovatorsSolution.jpg"
+	}
 	]
 };
 
 var education = {
 	"schools" : [
-		{
-			"name" : "Southern Methodist University",
-			"location" : "Dallas, Texas",
-			"degree" : "Bachelors of Science",
-			"majors" : "Economics with Financial Applications",
-			"dates" : 2010,
-			"url" : "www.smu.edu"
-		},
-		{
-			"name" : "Hillel Academy",
-			"location" : "Kingston, Jamaica",
-			"degree" : "Associate's degree",
-			"majors" : "something",
-			"dates" : 2006,
-			"url" : "http://www.hilleljm.com/"
-		}
+	{
+		"name" : "Southern Methodist University",
+		"location" : "Dallas, Texas",
+		"degree" : "Bachelors of Science",
+		"majors" : "Economics with Financial Applications",
+		"dates" : 2010,
+		"url" : "www.smu.edu"
+	},
+	{
+		"name" : "Hillel Academy",
+		"location" : "Kingston, Jamaica",
+		"degree" : "Associate's degree",
+		"majors" : "something",
+		"dates" : 2006,
+		"url" : "http://www.hilleljm.com/"
+	}
 	],
 	"onlineCourses" : [
-		{
-			"title" : "Intro to HTML and CSS",
-			"school" : "Udacity",
-			"date" : 2015,
-			"courseUrl" : "www.Udacity.com"
-		},
-		{
-			"title" : "How to Use Git and GitHub",
-			"school" : "Udacity",
-			"date" : 2015,
-			"courseUrl" : "www.Udacity.com"
-		}
+	{
+		"title" : "Intro to HTML and CSS",
+		"school" : "Udacity",
+		"date" : 2015,
+		"courseUrl" : "www.Udacity.com"
+	},
+	{
+		"title" : "How to Use Git and GitHub",
+		"school" : "Udacity",
+		"date" : 2015,
+		"courseUrl" : "www.Udacity.com"
+	}
 	]
 };
 
-bio.display = function(){
+bio.display = function() {
 	var formattedName = HTMLheaderName.replace("%data%",bio.name);
 	var formattedRole = HTMLheaderRole.replace("%data%",bio.role);		
 	var formattedNameRole = formattedName + formattedRole;
@@ -114,8 +114,7 @@ bio.display = function(){
 		var formattedSkills = HTMLskills.replace("%data%", bio.skills[2]);
 		$("#header").append(formattedSkills);
 	}
-}
-
+};
 bio.display();
 
 work.display = function() {
@@ -132,7 +131,7 @@ work.display = function() {
 		var	formattedDescription = HTMLworkDescription.replace("%data%",work.jobs[job].description);
 		$(".work-entry:last").append(formattedDescription);
 	}
-}
+};
 work.display(); 
 
 projects.display = function() {
@@ -147,7 +146,7 @@ projects.display = function() {
 		var formattedProjectImage = HTMLprojectImage.replace("%data%",projects.projects[project].image);
 		$(".project-entry:last").append(formattedProjectImage);
 	}
-}
+};
 projects.display();
 
 education.display = function() {
@@ -162,9 +161,7 @@ education.display = function() {
 		var formattedDates = HTMLschoolDates.replace("%data%", education.schools[edu].dates);
 		$(".education-entry:last").append(formattedDates);
 		var formattedMajors = HTMLschoolMajor.replace("%data%", education.schools[edu].majors);
-		$(".education-entry:last").append(formattedMajors);	
-
-		
+		$(".education-entry:last").append(formattedMajors);		
 	}
 		var formattedCourses = HTMLonlineClasses;  //Online Classes heading was being duplicated if placed in the onlineCourse for/in loop.  
 		$(".education-entry:last").append(HTMLonlineClasses);
@@ -179,7 +176,7 @@ education.display = function() {
 		var formattedURL = HTMLonlineURL.replace("%data%", education.onlineCourses[edu].courseUrl);
 		$(".education-entry:last").append(formattedURL);
 	}	
-}
+};
 education.display();
 
 $("#mapDiv").append(googleMap);
